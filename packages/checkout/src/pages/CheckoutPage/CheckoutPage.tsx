@@ -1,4 +1,3 @@
-import React, { useContext, useEffect, useState } from 'react';
 import {
   IonButton,
   IonButtons,
@@ -13,11 +12,12 @@ import {
   IonToolbar,
   useIonRouter,
 } from '@ionic/react';
-import { DataContext, Address, CreditCard } from 'provider-lib';
-import './CheckoutPage.scss';
+import { Address, CreditCard, DataContext } from 'provider-lib';
+import React, { useContext, useEffect, useState } from 'react';
 import AddressItem from '../../components/AddressItem';
-import PaymentItem from '../../components/PaymentItem';
 import FadeIn from '../../components/FadeIn';
+import PaymentItem from '../../components/PaymentItem';
+import './CheckoutPage.scss';
 
 interface CheckoutPageProps {
   onDismiss?: () => void;
@@ -28,7 +28,6 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ onDismiss }) => {
   const [selectedAddress, setSelectedAddress] = useState<Address>();
   const [selectedCreditCard, setSelectedCreditCard] = useState<CreditCard>();
   const router = useIonRouter();
-
 
   useEffect(() => {
     if (user && !selectedAddress) {
@@ -50,11 +49,11 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ onDismiss }) => {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonButton onClick={() => onDismiss ? onDismiss() : null}>
+            <IonButton onClick={() => (onDismiss ? onDismiss() : null)}>
               Cancel
             </IonButton>
           </IonButtons>
-          <IonTitle>Checkout</IonTitle>
+          <IonTitle>Checkout Micro</IonTitle>
         </IonToolbar>
       </IonHeader>
       <FadeIn isLoaded={user != null && cart != null}>
@@ -112,8 +111,7 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ onDismiss }) => {
               <IonButton
                 className="order-button"
                 expand="block"
-                onClick={() => {
-                }}
+                onClick={() => {}}
               >
                 Place Your Order
               </IonButton>

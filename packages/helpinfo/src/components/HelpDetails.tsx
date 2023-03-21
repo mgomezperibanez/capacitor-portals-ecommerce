@@ -1,15 +1,4 @@
-import React, { useState } from 'react';
-import {
-  IonBackButton,
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonIcon,
-  IonItem,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react';
+import { IonIcon, IonItem } from '@ionic/react';
 import { callOutline, mailOutline } from 'ionicons/icons';
 
 import './HelpDetails.scss';
@@ -18,7 +7,7 @@ const HelpDetails = () => {
   return (
     <>
       <IonItem lines="none">
-        <h1>Get Assistance</h1>
+        <h1>Get Assistance Micro</h1>
       </IonItem>
       <IonItem lines="none">
         <p>

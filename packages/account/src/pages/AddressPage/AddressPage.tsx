@@ -1,33 +1,31 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { caretDownOutline } from 'ionicons/icons';
 import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCheckbox,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonInput,
   IonItem,
   IonLabel,
-  IonInput,
-  IonHeader,
-  IonButtons,
-  IonBackButton,
-  IonToolbar,
-  IonTitle,
-  IonButton,
-  IonContent,
   IonPage,
-  IonIcon,
-  IonCheckbox,
   IonText,
+  IonTitle,
+  IonToolbar,
   useIonPicker,
   useIonRouter,
 } from '@ionic/react';
-import { DataContext, Address, User, stateCodes } from 'provider-lib';
+import { caretDownOutline } from 'ionicons/icons';
+import { Address, DataContext, stateCodes, User } from 'provider-lib';
+import React, { useContext, useEffect, useState } from 'react';
 import './AddressPage.css';
 
 type AddressPageProps = {
   id?: string;
 };
 
-const AddressPage: React.FC<AddressPageProps> = (
-  props
-) => {
+const AddressPage: React.FC<AddressPageProps> = (props) => {
   const { id } = props;
   const { user, setUser } = useContext(DataContext);
   const [address, setAddress] = useState<Address>();
@@ -130,7 +128,7 @@ const AddressPage: React.FC<AddressPageProps> = (
           ></IonInput>
         </IonItem>
         <IonItem lines="full">
-          <IonLabel position="fixed">Address</IonLabel>
+          <IonLabel position="fixed">Address 1</IonLabel>
           <IonInput
             placeholder=""
             debounce={500}

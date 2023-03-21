@@ -1,3 +1,4 @@
+import { Camera, CameraDirection, CameraResultType } from '@capacitor/camera';
 import {
   IonButton,
   IonContent,
@@ -11,18 +12,17 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  useIonRouter,
   useIonModal,
+  useIonRouter,
 } from '@ionic/react';
-import { useCallback, useContext, useEffect, useState } from 'react';
-import { DataContext } from 'provider-lib';
 import { add } from 'ionicons/icons';
-import { Camera, CameraDirection, CameraResultType } from '@capacitor/camera';
-import './UserDetailPage.scss';
+import { DataContext } from 'provider-lib';
+import { useCallback, useContext, useEffect, useState } from 'react';
 import AddressItem from '../../components/AddressItem';
+import FadeIn from '../../components/FadeIn';
 import ImageCropper from '../../components/ImageCropper';
 import PaymentItem from '../../components/PaymentItem';
-import FadeIn from '../../components/FadeIn';
+import './UserDetailPage.scss';
 
 interface FormData {
   firstName: string;
@@ -137,7 +137,7 @@ const UserDetailPage = () => {
 
                 <div className="list-section">
                   <IonList lines="none">
-                    <IonListHeader>Addresses</IonListHeader>
+                    <IonListHeader>Addresses 2</IonListHeader>
                     {user.addresses.map((address) => (
                       <AddressItem
                         key={address.id}

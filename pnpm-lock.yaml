@@ -172,7 +172,7 @@ importers:
       '@capacitor/core': ^3.6.0
       '@capacitor/ios': ^3.6.0
       '@craco/craco': ^6.4.3
-      '@ionic-enterprise/capacitor-portals': '*'
+      '@ionic-enterprise/capacitor-portals': 0.0.5
       '@ionic/react': ^6.2.0
       '@ionic/react-router': ^6.2.0
       '@testing-library/jest-dom': ^5.12.0
@@ -201,7 +201,7 @@ importers:
       '@capacitor/camera': 1.3.1_@capacitor+core@3.7.0
       '@capacitor/core': 3.7.0
       '@capacitor/ios': 3.7.0_@capacitor+core@3.7.0
-      '@ionic-enterprise/capacitor-portals': 0.0.1_@capacitor+core@3.7.0
+      '@ionic-enterprise/capacitor-portals': 0.0.5_@capacitor+core@3.7.0
       '@ionic/react': 6.2.5_sfoxds7t5ydpegc3knd667wn6m
       '@ionic/react-router': 6.2.5_tf2fh75nphjjkupmfjxhmflcfq
       '@testing-library/jest-dom': 5.16.5
@@ -1800,10 +1800,11 @@ packages:
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
 
-  /@ionic-enterprise/capacitor-portals/0.0.1_@capacitor+core@3.7.0:
-    resolution: {integrity: sha512-A48jZM7x4lj42Oe4H6gDF+1bYvzKcLcKE5uP8ejLT7QHl7xscjllJdFTPKHPm+gFTUeZ0q0+B8ZcO6bHHTRRyQ==}
+  /@ionic-enterprise/capacitor-portals/0.0.5_@capacitor+core@3.7.0:
+    resolution: {integrity: sha512-iBeWGaUXBWBeFRXIE/WdQiv2XgjuPaUI9OW8URYTMAkmHK2MwB+thKmhKIZ+t6eJPdWHqlmTuJq086+I+w4OaA==}
+    hasBin: true
     peerDependencies:
-      '@capacitor/core': ^3.6.0
+      '@capacitor/core': ^3.9.0 || ^4.0.0
     dependencies:
       '@capacitor/core': 3.7.0
     dev: false
@@ -8988,6 +8989,12 @@ packages:
   /react-dev-utils/12.0.1_j7mri6brqo6jqc4rzvyyrslsmu:
     resolution: {integrity: sha512-84Ivxmr17KjUupyqzFode6xKhjwuEJDROWKJy/BthkL7Wn6NJ8h4WE6k/exAv6ImS+0oZLRRW5j/aINMHyeGeQ==}
     engines: {node: '>=14'}
+    peerDependencies:
+      typescript: '>=2.7'
+      webpack: '>=4'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
       '@babel/code-frame': 7.18.6
       address: 1.2.0
@@ -9013,12 +9020,12 @@ packages:
       shell-quote: 1.7.3
       strip-ansi: 6.0.1
       text-table: 0.2.0
+      typescript: 4.8.2
+      webpack: 5.74.0
     transitivePeerDependencies:
       - eslint
       - supports-color
-      - typescript
       - vue-template-compiler
-      - webpack
 
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}

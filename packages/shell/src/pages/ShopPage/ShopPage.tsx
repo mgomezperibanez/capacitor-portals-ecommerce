@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
 import {
+  IonCard,
+  IonCardSubtitle,
+  IonCardTitle,
   IonContent,
-  IonPage,
   IonHeader,
+  IonPage,
   IonTitle,
   IonToolbar,
-  IonCard,
-  IonCardTitle,
-  IonCardSubtitle,
 } from '@ionic/react';
 import { DataContext } from 'provider-lib';
+import { useContext } from 'react';
 
 import './ShopPage.scss';
 
@@ -31,7 +31,7 @@ const ShopPage = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Shop</IonTitle>
+            <IonTitle size="large">Shop 1</IonTitle>
           </IonToolbar>
         </IonHeader>
         <div className="ion-padding">
